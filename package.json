@@ -1,22 +1,20 @@
 {
-  "name": "b",
+  "name": "magic-form",
   "version": "1.0.0",
-  "description": "",
+  "description": "Handling form data with Node and Express.js",
   "type": "module",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node server",
+    "dev": "nodemon server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "tpr",
+  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "ejs": "^3.1.9",
-    "express": "^4.18.2"
+    "body-parser": "^1.20.3",
+    "express": "^4.21.2"
   },
   "devDependencies": {
-    "nodemon": "^3.0.2"
+    "nodemon": "^3.1.9"
   }
 }

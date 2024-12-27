@@ -2,7 +2,6 @@ import express from "express";
 import bodyParser from "body-parser";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
-import exp from "constants";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const app = express();
@@ -14,14 +13,18 @@ app.use(express.static("public"));
 
 function magicWordChecker(req, res, next) {
     const password = req.body["password"];
-    if (password === "Magician") {
-        userIsAuthorised = true;
-    } else {
-        userIsAuthorised = false;
+    if (password) {
+        console.log(password);
+
+        if (password === "Magician") {
+            userIsAuthorised = true;
+        } else {
+            userIsAuthorised = false;
+        }
     }
-    console.log(req.body["password"]);
     next();
 }
+
 app.use(magicWordChecker);
 
 app.get("/", (req, res) => {
